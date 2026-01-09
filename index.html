@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,6 +14,7 @@
     css.href = `${css.href}?v=${timestamp}`;
   </script>
 </head>
+
 <body>
   <header>
     <h1>Tony's Portfolio</h1>
@@ -27,7 +29,9 @@
 
   <section id="bio">
     <h2>About Me</h2>
-    <p>Hi, I'm Tony Lin, a current student at the University of South Carolina. I will graduate in Spring of 2026 with a Bachelor's of Science in Computer Science with a concentration in Cybersecurity. Below you can find my resume, certifications, and personal projects I have worked on.</p>
+    <p>Hi, I'm Tony Lin, a current student at the University of South Carolina. I will graduate in Spring of 2026 with a
+      Bachelor's of Science in Computer Science with a concentration in Cybersecurity. Below you can find my resume,
+      certifications, and personal projects I have worked on.</p>
   </section>
 
   <section id="resume">
@@ -59,11 +63,54 @@
   <section id="projects">
     <h2>Projects</h2>
 
+    <!-- Journal -->
+    <div class="project-card">
+      <h3>Journal</h3>
+      <img src="assets/images/JournalWebUI.png" alt="Journal App Screenshot" class="project-img">
+      <p><strong>Description:</strong> Journal is a full-stack personal journaling web application with secure user
+        authentication, email verification, and cloud-based data storage. Users can create, organize, and search journal
+        entries with a tagging system and favorites feature.</p>
+
+      <details>
+        <summary>View Details</summary>
+        <div class="details-content">
+          <h4>Tech Stack</h4>
+          <ul class="tech-stack">
+            <li><strong>Frontend:</strong> HTML, CSS, JavaScript</li>
+            <li><strong>Backend:</strong> Node.js (AWS Lambda)</li>
+            <li><strong>Database:</strong> MongoDB Atlas</li>
+            <li><strong>Email:</strong> Brevo (Transactional API)</li>
+            <li><strong>Deployment:</strong> AWS Lambda + API Gateway</li>
+            <li><strong>Hosting:</strong> GitHub Pages</li>
+          </ul>
+
+          <h4>Key Features</h4>
+          <ul class="features">
+            <li>🔐 Secure authentication with JWT tokens</li>
+            <li>📧 Email verification for new accounts</li>
+            <li>📝 Create, edit, and delete journal entries</li>
+            <li>🏷️ Tag system for organizing entries</li>
+            <li>⭐ Mark entries as favorites</li>
+            <li>🔍 Search entries by title and content</li>
+            <li>📅 Calendar view of entries</li>
+            <li>🌙 Modern dark mode UI</li>
+          </ul>
+        </div>
+      </details>
+
+      <div class="links">
+        <a href="https://github.com/lintony6/Journal" target="_blank" class="btn">View on GitHub</a>
+        <a href="https://lintony6.github.io/Journal/" target="_blank" class="btn">Live Demo</a>
+      </div>
+    </div>
+
     <!-- WeatherApp -->
     <div class="project-card">
       <h3>WeatherApp</h3>
       <img src="assets/images/WeatherAppWebUI.png" alt="Weather App Screenshot" class="project-img">
-      <p><strong>Description:</strong> WeatherApp provides current weather information and a 5-day forecast for any city, available as both desktop and web versions. It uses the VisualCrossing and LocationIQ APIs to display real-time weather data and maps.</p>
+      <p><strong>Description:</strong> WeatherApp provides current weather information and a 5-day forecast for any
+        city, available as both desktop and web versions. It uses the VisualCrossing and LocationIQ APIs to display
+        real-time weather data and maps.</p>
 
       <details>
         <summary>View Details</summary>
@@ -98,7 +145,9 @@
     <div class="project-card">
       <h3>Canvas Draw</h3>
       <img src="assets/images/CanvasWebUI.png" alt="Canvas Draw Screenshot" class="project-img">
-      <p><strong>Description:</strong> Canvas Draw is a web-based drawing application built with HTML5 Canvas and JavaScript. It allows users to create digital artwork using brushes, shapes, text, and a flood fill tool — complete with undo/redo, dark mode, and timelapse replay features.</p>
+      <p><strong>Description:</strong> Canvas Draw is a web-based drawing application built with HTML5 Canvas and
+        JavaScript. It allows users to create digital artwork using brushes, shapes, text, and a flood fill tool —
+        complete with undo/redo, dark mode, and timelapse replay features.</p>
 
       <details>
         <summary>View Details</summary>
@@ -143,4 +192,5 @@
     <p>&copy; 2025 Tony Lin</p>
   </footer>
 </body>
+
 </html>
