@@ -176,6 +176,48 @@
         <a href="https://lintony6.github.io/CanvasDraw/" target="_blank" class="btn">Live Demo</a>
       </div>
     </div>
+
+    <!-- Multithreaded Group Chat -->
+    <div class="project-card">
+      <h3>Multithreaded Group Chat</h3>
+      <div class="asciinema-embed">
+        <script src="https://asciinema.org/a/G0QzO9feqQRsVqzO.js" id="asciicast-G0QzO9feqQRsVqzO" async="true"></script>
+      </div>
+      <p><strong>Description:</strong> A multi-client group chat server and client built entirely in C. The server
+        manages simultaneous connections via a custom thread pool (pthreads), dispatching each client to a worker
+        thread for real-time message broadcasting. The client uses <code>poll()</code> for fully asynchronous,
+        non-blocking I/O.</p>
+
+      <details>
+        <summary>View Details</summary>
+        <div class="details-content">
+          <h4>Tech Stack</h4>
+          <ul class="tech-stack">
+            <li><strong>Language:</strong> C (C11)</li>
+            <li><strong>Networking:</strong> POSIX Sockets · TCP/IP</li>
+            <li><strong>Concurrency:</strong> pthreads · Mutexes · Condition Variables</li>
+            <li><strong>I/O Multiplexing:</strong> poll()</li>
+            <li><strong>Build:</strong> GCC · Makefile</li>
+            <li><strong>Platform:</strong> Linux / macOS / WSL</li>
+          </ul>
+
+          <h4>Key Features</h4>
+          <ul class="features">
+            <li>Custom thread pool (8 workers) — no per-connection thread spawning</li>
+            <li>FIFO linked-list queue dispatches clients to idle workers</li>
+            <li>Real-time message broadcasting to all connected clients</li>
+            <li>Async client I/O with <code>poll()</code> over stdin and socket</li>
+            <li>Graceful SIGINT shutdown: drains pool, closes all FDs, frees memory</li>
+            <li>Buffer overflow protection with strict bounds checking</li>
+            <li>Named clients — username prepended to every broadcasted message</li>
+          </ul>
+        </div>
+      </details>
+
+      <div class="links">
+        <a href="https://github.com/lintony6/Multi-Threaded-Groupchat" target="_blank" class="btn">View on GitHub</a>
+      </div>
+    </div>
   </section>
 
   <section id="contact">
